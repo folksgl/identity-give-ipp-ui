@@ -1,3 +1,4 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/444cbef95c74e1809472/maintainability)](https://codeclimate.com/github/18F/identity-give-ipp-ui/maintainability)
 ## IPP Frontend React App
 This application utilizes React JS to host the necessary UI for the IPP microservice.
 
