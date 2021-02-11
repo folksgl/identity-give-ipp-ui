@@ -1,7 +1,7 @@
 ---
 applications:
-- name: identity-give-ipp-ui
+  - name: identity-give-ipp-ui
 path: build/
-instances: 1
+instances: ((instances))
 buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-memory: 256M
+memory: ((memory))
