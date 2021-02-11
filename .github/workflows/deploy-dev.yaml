@@ -1,0 +1,30 @@
+---
+name: Deploy-Dev
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+      - run: npm clean-install
+      - run: npm run build --if-present
+      - name: Deploy to cloud.gov
+        run: |
+          # Install the CloudFoundry CLI
+          brew install cloudfoundry/tap/cf-cli@7
+          cf --version
+
+          # Setup CF CLI
+          cf api https://api.fr.cloud.gov
+          cf auth ${{ secrets.CF_USERNAME }} ${{ secrets.CF_PASSWORD }}
+          cf target -o ${{ secrets.CF_ORG }} -s give-dev
+
+          # Deploy application
+          cf push --vars-file vars.yml
