@@ -2,6 +2,9 @@
 ## IPP Frontend React App
 This application utilizes React JS to host the necessary UI for the IPP microservice.
 
+## CI/CD Workflows with GitHub Actions
+The most up-to-date information about the CI/CD flows for this repo can be found in the [GitHub workflows directory](https://github.com/18F/identity-give-ipp-idemia/tree/main/.github/workflows)
+
 ### Pre-requisites
 - Node.js [Download Node.js](https://nodejs.org/en/)  
 - React Router `npm install react-router-dom`
