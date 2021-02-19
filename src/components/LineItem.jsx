@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LineItem = ({
         address,
         city,
@@ -10,7 +9,7 @@ const LineItem = ({
         ...props
       }) => {
     return (
-        <p>{address}<br />{city}, {state} {postalCode}<br /><a href="url">{phone}</a></p>
+        <p>{address}<br />{city}, {state} {postalCode}<br /><button type="button"className="link-button" >{phone}</button></p>
        
         );
 }

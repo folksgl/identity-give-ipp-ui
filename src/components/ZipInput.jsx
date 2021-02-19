@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 
 const ZipInput = ({
@@ -30,7 +30,6 @@ const ZipInput = ({
           placeholder={placeholder}
           onChange={onChange}
           value={value}
-          className={className}
           required="required"
         />
         {error && <p>{error}</p>}
@@ -47,7 +46,6 @@ ZipInput.defaultProps = {
 
 ZipInput.propTypes = {
   name: PropTypes.string.isRequired,
-  type: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['text', 'number', 'password']),
   className: PropTypes.string,

@@ -3,11 +3,6 @@ import Item from './Item';
 import MapResults from './MapResults';
 
 class Results extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const coords = this.props.items;
 
