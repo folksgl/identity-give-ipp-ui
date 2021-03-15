@@ -22,7 +22,9 @@ jobs:
       - run: npm run build --if-present
 
       - name: Install CloudFoundry CLI
-        run: brew install cloudfoundry/tap/cf-cli@7
+        run: |
+          curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v7&source=github" | tar -zx --directory=/usr/local/bin
+          cf --version
 
       - name: Setup CF CLI
         run: |
